@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansøgninger - Underverdenen</title>
+    <link rel="stylesheet" href="ans.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="background"></div>
+    </div>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../ui/index.html">Hjem</a></li>
+                <li><a href="ansøgninger.html">Ansøgninger</a></li>
+                <li><a href="../regler/regler.html">Regler</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1>Ansøgninger</h1>
+    </header>
+    <main>
+        <section id="discord-tag-section">
+            <form id="discord-tag-form">
+                <label for="discord-tag">Indtast dit Discord-tag:</label>
+                <input type="text" id="discord-tag" name="discord-tag" required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section class="accordion" id="applications-section" style="display:none;">
+            <div class="accordion-item">
+                <h2 class="accordion-header">Politi Ansøgning</h2>
+                <div class="accordion-content">
+                    <form data-type="Politi" data-age-restriction="21" data-webhook="https://discord.com/api/webhooks/1263704966573457498/9R8OMbemYgXndMRj3KvtvtecVlhStFOtCHNRNOu_m_0UKjLZjLosYwN0caBnUzdGx1wN">
+                        <label for="police-name">Navn:</label>
+                        <input type="text" id="police-name" name="police-name" required>
+                        <label for="police-age">Alder:</label>
+                        <input type="number" id="police-age" name="police-age" required>
+                        <label for="police-offer">Hvad kan du tilbyde:</label>
+                        <textarea id="police-offer" name="police-offer" required></textarea>
+                        <label for="police-personality">Hvordan er du som person:</label>
+                        <textarea id="police-personality" name="police-personality" required></textarea>
+                        <label for="police-contribution">Hvad kan du give os:</label>
+                        <textarea id="police-contribution" name="police-contribution" required></textarea>
+                        <label for="police-experience">Har du prøvet det før:</label>
+                        <textarea id="police-experience" name="police-experience" required></textarea>
+                        <button type="submit">Send Ansøgning</button>
+                    </form>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">EMS Ansøgning</h2>
+                <div class="accordion-content">
+                    <form data-type="EMS" data-age-restriction="18" data-webhook="https://discord.com/api/webhooks/WEBHOOK_URL_EMS">
+                        <label for="ems-name">Navn:</label>
+                        <input type="text" id="ems-name" name="ems-name" required>
+                        <label for="ems-age">Alder:</label>
+                        <input type="number" id="ems-age" name="ems-age" required>
+                        <!-- Tilføj flere felter efter behov -->
+                        <button type="submit">Send Ansøgning</button>
+                    </form>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">Staff Ansøgning</h2>
+                <div class="accordion-content">
+                    <form data-type="Staff" data-age-restriction="18" data-webhook="https://discord.com/api/webhooks/WEBHOOK_URL_STAFF">
+                        <label for="staff-name">Navn:</label>
+                        <input type="text" id="staff-name" name="staff-name" required>
+                        <label for="staff-age">Alder:</label>
+                        <input type="number" id="staff-age" name="staff-age" required>
+                        <!-- Tilføj flere felter efter behov -->
+                        <button type="submit">Send Ansøgning</button>
+                    </form>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">Allowlist Ansøgning</h2>
+                <div class="accordion-content">
+                    <form data-type="Allowlist" data-age-restriction="18" data-webhook="https://discord.com/api/webhooks/WEBHOOK_URL_ALLOWLIST">
+                        <label for="allowlist-name">Navn:</label>
+                        <input type="text" id="allowlist-name" name="allowlist-name" required>
+                        <label for="allowlist-age">Alder:</label>
+                        <input type="number" id="allowlist-age" name="allowlist-age" required>
+                        <!-- Tilføj flere felter efter behov -->
+                        <button type="submit">Send Ansøgning</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="notification" style="display:none;"></section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Underverdenen. Alle rettigheder forbeholdes. Udviklet af GS STORE</p>
+    </footer>
+    <script src="ans.js"></script>
+</body>
+</html>

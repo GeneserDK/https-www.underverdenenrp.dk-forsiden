@@ -1,0 +1,235 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Mørk baggrundsfarve */
+    color: #f5f5f5; /* Lys tekstfarve */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Forhindrer scrolling */
+}
+
+.background-container {
+    position: fixed; /* Fikser baggrunden så den dækker hele skærmen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Sørger for at baggrunden er bagved alt andet */
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url('weblogo.png'); /* Opdater her */
+    background-size: cover; /* Dækker hele containeren */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Juster opacity som ønsket */
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 1; /* Sørger for at indholdet er over baggrunden */
+}
+
+header {
+    background-color: rgba(31, 31, 31, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Mørkere skygge */
+}
+
+header h1 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.navbar {
+    background-color: rgba(31, 31, 31, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    border-bottom: 2px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    display: block;
+    padding: 14px 20px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: rgba(50, 50, 50, 0.6); /* Mørkere og gennemsigtig hover-effekt */
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh; /* Ensures footer is pushed to the bottom if content is short */
+}
+
+#discord-tag-section, .accordion {
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+#discord-tag-form {
+    background-color: rgba(31, 31, 31, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    width: 100%; /* Gør formularen fuld bredde */
+}
+
+#discord-tag-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#discord-tag-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    background-color: #333;
+    color: #fff;
+}
+
+#discord-tag-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#discord-tag-form button:hover {
+    background-color: #45a049;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    border: 1px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: rgba(31, 31, 31, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    padding: 15px;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: rgba(43, 43, 43, 0.9); /* Mørkere, gennemsigtig baggrundsfarve */
+}
+
+.accordion-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-content label {
+    margin-bottom: 10px;
+}
+
+.accordion-content input, .accordion-content textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    background-color: #333;
+    color: #fff;
+}
+
+.accordion-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-content button:hover {
+    background-color: #45a049;
+}
+
+.accordion-header::after {
+    content: '\002B';
+    font-size: 1.5em;
+}
+
+.accordion-header.active::after {
+    content: '\2212';
+}
+
+footer {
+    background-color: rgba(31, 31, 31, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    padding: 20px 10px;
+    text-align: center;
+    border-top: 2px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5); /* Mørkere skygge */
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.notification {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}

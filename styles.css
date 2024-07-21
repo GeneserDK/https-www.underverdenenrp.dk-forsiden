@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #121212; /* Mørk baggrundsfarve */
+    color: #e0e0e0; /* Lys tekstfarve for kontrast */
+}
+
+.background-container {
+    position: fixed; /* Fikser baggrunden så den dækker hele skærmen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Sørg for at baggrunden er bagved alt andet */
+}
+
+.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Dækker hele containeren */
+    height: 100%; /* Dækker hele containeren */
+    background-image: url('weblogo.png'); /* Opdater her */
+    background-size: cover; /* Dækker hele containeren */
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.2; /* Juster opacity som ønsket */
+    z-index: -1; /* Sørg for at baggrunden er bagved alt andet */
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 1; /* Sørg for at indholdet er over baggrunden */
+}
+
+header {
+    background-color: rgba(20, 20, 20, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Mørkere skygge */
+}
+
+header h1 {
+    color: #e0e0e0; /* Lys tekstfarve */
+    margin: 0;
+    font-size: 2.5em; /* Større font-størrelse */
+}
+
+.navbar {
+    background-color: rgba(20, 20, 20, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    border-bottom: 2px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    display: block;
+    color: #e0e0e0; /* Lys tekstfarve */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navbar li a:hover {
+    background-color: rgba(50, 50, 50, 0.6); /* Mørkere og gennemsigtig hover-effekt */
+}
+
+main {
+    padding: 20px;
+    padding-top: 80px; /* Justeret plads til navbar */
+}
+
+.accordion {
+    margin-bottom: 20px;
+    border: 1px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(30, 30, 30, 0.8); /* Mørk, gennemsigtig baggrundsfarve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Mørkere skygge */
+}
+
+.accordion-header {
+    background-color: rgba(40, 40, 40, 0.9); /* Mørkere, gennemsigtig baggrundsfarve */
+    color: #e0e0e0; /* Lys tekstfarve */
+    cursor: pointer;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5); /* Mørkere og gennemsigtig kant */
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: rgba(30, 30, 30, 0.9); /* Mørk, gennemsigtig baggrundsfarve */
+    color: #e0e0e0; /* Lys tekstfarve */
+    font-size: 1em;
+}
+
+.accordion-header::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 1.5em;
+}
+
+.accordion-header.active::after {
+    content: '\2212'; /* Minus sign */
+}
+
+footer {
+    background-color: rgba(20, 20, 20, 0); /* Mørk, gennemsigtig baggrundsfarve */
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 2px solid rgba(50, 50, 50, 0); /* Mørkere og gennemsigtig kant */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0); /* Mørkere skygge */
+}
+
+footer p {
+    color: #e0e0e0; /* Lys tekstfarve */
+    margin: 0;
+}
+
+.server-status {
+    background-color: #4CAF50; /* Grøn */
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 250px; /* Juster bredden her */
+    height: 50px; /* Juster højden her */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.server-status.error {
+    background-color: #f44336; /* Rød */
+}
